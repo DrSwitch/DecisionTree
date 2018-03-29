@@ -1,0 +1,33 @@
+﻿<Window x:Class="Decision.Tree.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Decision.Tree"
+        xmlns:integration="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="500" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Button x:Name="OpenFile" Margin="5,5,5,5" Height="30" Content="Обзор" Click="OpenFile_Click" />
+            <Button x:Name="SelectHeaders" Margin="5,5,5,5" Height="30" Content="Выбрать заголовки" Click="SelectHeaders_Click" />
+            <Button x:Name="SelectResults" Margin="5,5,5,5" Height="30" Content="Выбрать результаты" Click="SelectResults_Click" />
+            <Button x:Name="SelectData" Margin="5,5,5,5" Height="30" Content="Выбрать данные" Click="SelectData_Click" />
+            <Button x:Name="CreateTree" Margin="5,5,5,5" Height="30" Content="Построить дерево" Click="CreateTree_Click" />
+
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock x:Name="headerstext" Height="120" Margin="5,5,5,5" Text=""/>
+            <TextBlock x:Name="resultstext" Height="120" Margin="5,5,5,5" Text=""/>
+            <TextBlock x:Name="datatext" Height="120" Margin="5,5,5,5" Text=""/>
+        </StackPanel>
+        <Grid Name="grid1" Margin="5,5,5,5" Grid.Column="2">
+            
+        </Grid>
+    </Grid>
+</Window>
